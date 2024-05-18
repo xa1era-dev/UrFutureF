@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+    <div class="auth">
+        <div class="auth__inner">
+            <div class="auth__cover">
+                <div class="auth__logo">
+                    <img src="images/auth-logo.svg" alt="">
+                </div>
+            </div>
+            <div class="auth__main">
+                <div class="auth__content">
+                    <div class="register">
+                        <div class="auth__title">
+                            Регистрация
+                        </div>
+                        <form class="register__form js-form" action="#">
+                            <div class="register__main">
+                                <div class="register__row">
+                                    <div class="register__group js-formGroup">
+                                        <label class="register__label" for="register-surname">Фамилия*</label>
+                                        <div class="register__box">
+                                            <input class="register__input js-formCheck" id="register-surname" name="register-surname" type="text" placeholder="Введите фамилию"
+                                                required>
+                                        </div>
+                                        <div class="register__error">
+                                            Введите данные
+                                        </div>
+                                    </div>
+                                    <div class="register__group js-formGroup">
+                                        <label class="register__label" for="register-name">Имя*</label>
+                                        <div class="register__box">
+                                            <input class="register__input js-formCheck" id="register-name" name="register-name" type="text" placeholder="Введите имя"
+                                                required>
+                                        </div>
+                                        <div class="register__error">
+                                            Введите данные
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="register__group js-formGroup">
+                                    <label class="register__label" for="register-patronymic">Отчество*</label>
+                                    <div class="register__box">
+                                        <input class="register__input js-formCheck" id="register-patronymic" name="register-patronymic" type="text" placeholder="Введите отчетво"
+                                            required>
+                                    </div>
+                                    <div class="register__error">
+                                        Введите данные
+                                    </div>
+                                </div>
+                                <div class="register__group js-formGroup">
+                                    <label class="register__label" for="register-email">E-mail*</label>
+                                    <div class="register__box">
+                                        <input class="register__input js-formCheck" id="register-email" name="register-email" type="text" placeholder="Введите email" required>
+                                    </div>
+                                    <div class="register__error">
+                                        Введите данные
+                                    </div>
+                                </div>
+                                <div class="register__group js-formGroup">
+                                    <label class="register__label" for="register-password">Пароль*</label>
+                                    <div class="register__box">
+                                        <input class="register__input input-password js-formCheck" id="register-password" name="register-password" type="password" placeholder="Введите пароль"
+                                            required>
+                                        <button class="register__eye toggle-password">
+                                            <svg>
+                                                <use class="register__eye-default" href="images/sprite.svg#eye"></use>
+                                                <use class="register__eye-active" href="images/sprite.svg#no-eye"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="register__error">
+                                        Введите данные
+                                    </div>
+                                </div>
+                                <div class="register__group js-formGroup">
+                                    <label class="register__label" for="register-password-repeat">Повторите пароль*</label>
+                                    <div class="register__box">
+                                        <input class="register__input input-password js-formCheck" id="register-password-repeat" name="register-password-repeat" type="password" placeholder="Введите пароль"
+                                            required>
+                                        <button class="register__eye toggle-password">
+                                            <svg>
+                                                <use class="register__eye-default" href="images/sprite.svg#eye"></use>
+                                                <use class="register__eye-active" href="images/sprite.svg#no-eye"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="register__error">
+                                        Введите данные
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="auth__submit js-formSubmit" type="submit">Регистрация</button>
+                        </form>
+                        <div class="auth__bottom">
+                            <p class="auth__bottom-text">
+                                У вас есть учётная запись?
+                            </p>
+                            <a class="auth__bottom-link" href="#">
+                                Войти
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>

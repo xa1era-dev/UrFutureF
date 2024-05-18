@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+    <div class="auth">
+        <div class="auth__inner">
+            <div class="auth__cover">
+                <div class="auth__logo">
+                    <img src="images/auth-logo.svg" alt="">
+                </div>
+            </div>
+            <div class="auth__main">
+                <div class="auth__content">
+                    <div class="login">
+                        <div class="auth__title">
+                            Авторизация
+                        </div>
+                        <form class="login__form js-form" action="#">
+                            <div class="login__main">
+                                <div class="login__group js-formGroup">
+                                    <label class="login__label" for="login-email">Email</label>
+                                    <div class="login__box">
+                                        <input class="login__input js-formCheck" id="login-email" name="login-email"
+                                            type="text" placeholder="Введите email или номер телефона">
+                                        <svg class="login__icon">
+                                            <use href="images/sprite.svg#login-face"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="login__error">
+                                        Введите данные
+                                    </div>
+                                </div>
+                                <div class="login__group js-formGroup">
+                                    <label class="login__label" for="login-password">Пароль</label>
+                                    <div class="login__box">
+                                        <input class="login__input input-password js-formCheck" id="login-password"
+                                            name="login-password" type="password" placeholder="Введите пароль">
+                                        <button class="login__eye toggle-password">
+                                            <svg>
+                                                <use class="login__eye-default" href="images/sprite.svg#eye"></use>
+                                                <use class="login__eye-active" href="images/sprite.svg#no-eye"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="login__error">
+                                        Введите данные
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="auth__submit js-formSubmit" type="submit">Войти</button>
+                        </form>
+                        <div class="auth__bottom">
+                            <p class="auth__bottom-text">
+                                У вас нет учётной записи?
+                            </p>
+                            <a class="auth__bottom-link" href="#">
+                                Зарегестрироваться
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>
