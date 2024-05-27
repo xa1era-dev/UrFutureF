@@ -9,8 +9,8 @@ function createChoiceTemplate() {
                 ${createDesciplineList(disciplines)}
             </div>
         </div>
-        <button>Назад</button>
-        <button>Далее</button>
+        <button class="previous-choice">Назад</button>
+        <button class="next-choice">Далее</button>
     </div>`
   )
 }

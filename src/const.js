@@ -38,6 +38,12 @@ const Cards= {
     },
 };
 
+const Choices = {
+    CHOISE1: 'choise1',
+    CHOISE2: 'choise2',
+    CHOISE3: 'choise3',
+    CHOISE4: 'choise4',
+}
 
 
-export {CardType, Cards}
+export {CardType, Cards, Choices}

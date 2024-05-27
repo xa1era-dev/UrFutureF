@@ -14,8 +14,8 @@ function createChoiceTemplate() {
                 <label>Суббота<input type="checkbox" name="day" value="Суббота"></label>
             </form>
         </div>
-        <button>Назад</button>
-        <button>Далее</button>
+        <button class="previous-choice">Назад</button>
+        <button class="next-choice">Далее</button>
     </div>`
   )
 }
