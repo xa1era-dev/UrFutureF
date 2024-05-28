@@ -1,20 +1,13 @@
-import { Cards } from '../constants.js';
-import AbstractView from '../framework/view/abstract-view.js';
+import { Cards } from '../const.js';
+import AbstractView from '../utils/abstract-view.js';
 
-function createCardsTemplate(type) {
+function createCardsTemplate(type, courses) {
   return(
     `<div class="courses">
-      ${createTitleTemplate(Cards[type].title)}
       ${createSelectTemplate(type)}
-      ${createCardListTemplate(type)}
-    </div>`
-  );
-}
-
-function createTitleTemplate(title) {
-  return (
-    `<div class="title">
-      ${title}
+      <div class="courses__items">
+        ${createCardListTemplate(courses)}
+      </div>
     </div>`
   );
 }
@@ -36,23 +29,20 @@ function createOptionTemplate(title) {
   );
 }
 
-function createCardListTemplate(type) {
-  const cardList = Cards[type].names.map((name) => (
-    createCardListItemTemplate(name))
+function createCardListTemplate(courses) {
+  const cardList = courses.map((course) => (
+    createCardListItemTemplate(course))
   ).join('');
 
-  return (
-    `<div class="courses__items">
-      ${cardList}
-    </div>`
-  );
+  return cardList;
 }
 
-function createCardListItemTemplate(title) {
+function createCardListItemTemplate(course) {
   return(
     `<a class="courses__item" href="#"
+      style="background: linear-gradient(90deg, #d3d7d6 0%, #d3d7d6 25.52%, rgba(211, 215, 214, 0.79) 57.31%, rgba(211, 215, 214, 0) 100%), url('${course.img}');
       <p>
-          ${title}
+          ${course.name}
       </p>
     </a>`
   );
@@ -60,13 +50,15 @@ function createCardListItemTemplate(title) {
 
 export default class CardsView extends AbstractView {
   #cardType = null;
+  #courses = null;
 
-  constructor(cardType) {
+  constructor(cardType, courses) {
     super();
     this.#cardType = cardType;
+    this.#courses = courses;
   }
 
   get template() {
-    return createCardsTemplate(this.#cardType);
+    return createCardsTemplate(this.#cardType, this.#courses);
   }
 }

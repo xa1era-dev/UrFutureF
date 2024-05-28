@@ -48,7 +48,7 @@ function createNavTemplate() {
                                 </a>
                             </li>
                             <li class="content-nav__item">
-                                <a class="content-nav__item-link" href="#">
+                                <a class="content-nav__item-link" href="finish-courses.html">
                                     Пройденные курсы
                                 </a>
                             </li>
