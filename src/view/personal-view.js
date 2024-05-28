@@ -1,9 +1,8 @@
+import AbstractView from "../utils/abstract-view";
+
 function createPesonalTemplate(person, teachers) {
     return (
-        `<div class="title">
-                Мое направление
-            </div>
-            <div class="direction">
+        `<div class="direction">
                 <div class="direction__about">
                     <div class="direction__about-avatar">
                         <img src="${person.img}" alt="${person.name}">

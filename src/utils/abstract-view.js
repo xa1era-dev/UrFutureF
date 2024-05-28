@@ -1,5 +1,5 @@
-import {createElement} from '../render.js';
-import './abstract-view.css';
+import { createElement } from "./render";
+// import './abstract-view.css';
 
 /**
  * Абстрактный класс представления

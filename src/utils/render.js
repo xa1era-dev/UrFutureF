@@ -1,4 +1,4 @@
-import AbstractView from './view/abstract-view.js';
+import AbstractView from "./abstract-view";
 
 /** @enum {string} Перечисление возможных позиций для отрисовки */
 const RenderPosition = {

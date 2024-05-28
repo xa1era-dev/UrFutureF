@@ -1,12 +1,17 @@
-import CardListPresenter from './presenter/card-presenter';
-import NavView from './view/nav-view';
-import { render } from './framework/render';
+import CardListPresenter from "../presenter/card-list-presenter";
+import NavView from "../view/nav-view";
+import CoursesModel from "../model/courses-model";
+import { CardType } from "../const";
+import { render } from "../utils/render";
 
+const coursesModel = new CoursesModel();
+const cardType = CardType.COURSES;
 
-const mainContainer = document.querySelector('.content-area');
-const cardContainer = mainContainer.querySelector('.content-main');
-const cardListPresenter = new CardListPresenter(cardContainer);
-const navViewComponent = new NavView();
+const navContainer = document.querySelector('.content-area');
+const contentContainer = navContainer.querySelector('.content-main');
 
-// render(navViewComponent, mainContainer);
+const cardListPresenter = new CardListPresenter(contentContainer, coursesModel, cardType);
+const navComponent = new NavView();
+
+render(navComponent, navContainer);
 cardListPresenter.init();
