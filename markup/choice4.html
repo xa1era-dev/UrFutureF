@@ -1,45 +1,32 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="../public/css/style.min.css">
 </head>
 
 <body>
-
     <div class="content-area">
         <!-- Навигация -->
         <div class="content-main">
             <div class="title">
-                Построение расписания
+                Расставьте приоритет выбора преподавателей
             </div>
-            <!-- Контент -->
-            <div class="tests">
-                <div class="tests-content">
-                    <div class="tests-title">Расставьте приоритет выбора преподавателей</div>
-                    <form>
-                        <details>
-                            <summary><label>Алгоритмы и анализ сложности<input type="checkbox" name="lesson" disabled></label></summary>
-                            <ol class="lesson-list">
-                                <li class="lesson-item">Компьютерные сети (Традиционный курс)</li>
-                                <li class="lesson-item">Компьютерные сети К Телеком (Традиционный курс)</li>
-                                <li class="lesson-item">Компьютерные сети на базе Cisco (смешанный)</li>
-                                <li class="lesson-item">Компьютерные сети на базе DLink (Традиционный курс)</li>
-                                <li class="lesson-item">Компьютерные сети на базе Huawei (повышенный уровень)</li>
-                            </ol>
-                        </details>
-                    </form>
-                </div>
-                <button>Назад</button>
-                <button>Далее</button>
+                    <details>
+                        <summary>
+                            Компьютерные сети
+                            <label class="checkbox-label">
+                                <input class="checkbox-input" type="checkbox" name="lesson">
+                                <div class="checkbox-border"></div>
+                                    <p class="checkbox-title">Важен приоритет преподавателей</p>
+                            </label>
+                        </summary>
+                        
+                    </details>
             </div>
         </div>
     </div>
 
-    <script src="js/main.min.js"></script>
+    <script src="/src/lk/choice-main.js" type="module"></script>
 </body>
 
 </html>
