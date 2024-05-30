@@ -9,7 +9,7 @@ function createNavTemplate() {
                     <div class="content-nav__item">
                         <div class="content-nav__toggle">
                             <svg class="content-nav__icon">
-                                <use href="images/sprite.svg#nav-main"></use>
+                                <use href="/public/images/sprite.svg#nav-main"></use>
                             </svg>
                         </div>
                         <div class="content-nav__dropdown">
@@ -22,7 +22,7 @@ function createNavTemplate() {
                 <div class="content-nav__item">
                     <div class="content-nav__toggle">
                         <svg class="content-nav__icon">
-                            <use href="images/sprite.svg#nav-calendar"></use>
+                            <use href="/public/images/sprite.svg#nav-calendar"></use>
                         </svg>
                     </div>
                     <div class="content-nav__dropdown">
@@ -34,7 +34,7 @@ function createNavTemplate() {
                 <div class="content-nav__item">
                     <div class="content-nav__toggle">
                         <svg class="content-nav__icon">
-                            <use href="images/sprite.svg#nav-studies"></use>
+                            <use href="/public/images/sprite.svg#nav-studies"></use>
                         </svg>
                     </div>
                     <div class="content-nav__dropdown">
@@ -58,7 +58,7 @@ function createNavTemplate() {
                 <div class="content-nav__item">
                     <div class="content-nav__toggle">
                         <svg class="content-nav__icon">
-                            <use href="images/sprite.svg#nav-list"></use>
+                            <use href="/public/images/sprite.svg#nav-list"></use>
                         </svg>
                     </div>
                     <div class="content-nav__dropdown">
@@ -89,7 +89,7 @@ function createNavTemplate() {
                 <div class="content-nav__item">
                     <div class="content-nav__toggle">
                         <svg class="content-nav__icon">
-                            <use href="images/sprite.svg#nav-statistics"></use>
+                            <use href="/public/images/sprite.svg#nav-statistics"></use>
                         </svg>
                     </div>
                     <div class="content-nav__dropdown">
@@ -101,7 +101,7 @@ function createNavTemplate() {
                 <div class="content-nav__item">
                     <div class="content-nav__toggle">
                         <svg class="content-nav__icon">
-                            <use href="images/sprite.svg#nav-hat"></use>
+                            <use href="/public/images/sprite.svg#nav-hat"></use>
                         </svg>
                     </div>
                     <div class="content-nav__dropdown">
@@ -125,7 +125,7 @@ function createNavTemplate() {
                 <div class="content-nav__item">
                     <div class="content-nav__toggle">
                         <svg class="content-nav__icon">
-                            <use href="images/sprite.svg#nav-archive"></use>
+                            <use href="/public/images/sprite.svg#nav-archive"></use>
                         </svg>
                     </div>
                     <div class="content-nav__dropdown">
@@ -136,7 +136,7 @@ function createNavTemplate() {
                 </div>
                 <div class="content-nav__item">
                     <div class="content-nav__toggle">
-                        <img class="content-nav__icon" src="images/nav-panel.png" alt="">
+                        <img class="content-nav__icon" src="/public/images/nav-panel.png" alt="">
                     </div>
                     <div class="content-nav__dropdown">
                         <a class="content-nav__link" href="#">
@@ -149,7 +149,7 @@ function createNavTemplate() {
                 <div class="content-nav__item">
                     <div class="content-nav__toggle">
                         <svg class="content-nav__icon">
-                            <use href="images/sprite.svg#nav-account"></use>
+                            <use href="/public/images/sprite.svg#nav-account"></use>
                         </svg>
                     </div>
                     <div class="content-nav__dropdown">
