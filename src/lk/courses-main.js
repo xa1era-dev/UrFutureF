@@ -8,7 +8,7 @@ const coursesModel = new CoursesModel();
 const cardType = CardType.COURSES;
 
 const navContainer = document.querySelector('.content-area');
-const contentContainer = navContainer.querySelector('.content-main');
+const contentContainer = navContainer.querySelector('.cards');
 
 const cardListPresenter = new CardListPresenter(contentContainer, coursesModel, cardType);
 const navComponent = new NavView();

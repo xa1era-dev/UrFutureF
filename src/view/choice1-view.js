@@ -1,4 +1,4 @@
-import AbstractView from '../framework/view/abstract-view.js';
+import AbstractView from '../utils/abstract-view.js';
 import { Choices } from '../const.js';
 
 function createChoiceTemplate() {
@@ -15,7 +15,7 @@ function createChoiceTemplate() {
             <label>Во второй половине дня<input type="radio" name="time" value="2"></label>
         </form>
       </div>
-      <button class="next-choice">Далее</button>
+      <button class="next-choice" disabled>Далее</button>
     </div>`
   )
 }
@@ -23,14 +23,18 @@ function createChoiceTemplate() {
 export default class Choice1View extends AbstractView {
   #onNextButtonClick = null;
   #currentChoice = Choices.CHOISE1;
-  #formValue = null;
+  #checkedInputs = [];
+  #nextButton = null;
 
   constructor(onNextButtonClick) {
     super()
     this.#onNextButtonClick = onNextButtonClick;
+    this.#nextButton = this.element.querySelector('.next-choice');
 
-    this.element.querySelector('.next-choise')
-      .addEventListener('click', this.#nextButtonClickHandler);
+    this.#nextButton.addEventListener('click', this.#nextButtonClickHandler);
+
+    this.element.querySelector('form')
+      .addEventListener('change', this.#inputHandler);
   }
 
   get template() {
@@ -39,7 +43,20 @@ export default class Choice1View extends AbstractView {
 
   #nextButtonClickHandler = (evt) => {
     evt.preventDefault();
-    this.#formValue = this.element?.querySelector('input[name="time"]:checked').value;
-    this.#onNextButtonClick(this.#currentChoice, this.#formValue);
+    this.#onNextButtonClick(this.#currentChoice, this.#checkedInputs);
   };
+
+  #inputHandler = (evt) => {
+    evt.preventDefault();
+
+    const value = evt.target.value;
+    const isChecked = evt.target.checked;
+    if (isChecked) {
+      this.#checkedInputs.push(value);
+    } else {
+      this.#checkedInputs = this.#checkedInputs.filter((item) => item !== value);
+    }
+
+    this.#nextButton.disabled = this.#checkedInputs.length === 0;
+  }
 }

@@ -11,6 +11,7 @@ export default {
         register: resolve(__dirname, 'public/register.html'),
         personal: resolve(__dirname, 'public/personal.html'),
         coursesFinish: resolve(__dirname, 'public/finish-courses.html'),
+        trajectory: resolve(__dirname, 'public/trajectory.html'),
       }
     }
   },

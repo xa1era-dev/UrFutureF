@@ -95,3 +95,5 @@ const disciplines = [
       ]
     }
   ]
+
+  export {disciplines};
