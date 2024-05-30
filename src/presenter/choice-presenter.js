@@ -1,7 +1,8 @@
 import { render, remove, replace } from '../utils/render';
 import Choice1View from '../view/choice1-view';
 import Choice2View from '../view/choice2-view';
-import Choice3View from '../view/choise3-view';
+import Choice3View from '../view/choice3-view';
+import Choice4View from '../view/choice4-view';
 import { Choices } from '../const';
 import { setDragonDrop } from '../utils/dragonDrop';
 
@@ -11,6 +12,7 @@ export default class ChoicePresenter {
     #timeValue = null;
     #dayValue = null;
     #coursesValue = null;
+    #teachersValue = null;
 
     #courses = null;
     #teachers = null;
@@ -23,6 +25,7 @@ export default class ChoicePresenter {
     #choise1Component = null;
     #choise2Component = null;
     #choise3Component = null;
+    #choise4Component = null;
 
     constructor(container, teacherModel, coursesModel, disciplinesModel) {
         this.#container = container;
@@ -39,6 +42,7 @@ export default class ChoicePresenter {
         this.#choise1Component = new Choice1View(this.#handleNextClick);
         this.#choise2Component = new Choice2View(this.#handleNextClick, this.#handlePrevClick);
         this.#choise3Component = new Choice3View(this.#handleNextClick, this.#handlePrevClick, this.#disciplines, this.#coursesModel);
+        this.#choise4Component = new Choice4View(this.#handleNextClick, this.#handlePrevClick, this.#disciplines);
 
         render(this.#choise1Component, this.#container);
     }
@@ -55,8 +59,12 @@ export default class ChoicePresenter {
                 setDragonDrop();
                 break;
             case Choices.CHOISE3:
-                this.#coursesValue = value
+                this.#coursesValue = value;
+                replace(this.#choise4Component, this.#choise3Component);
+                setDragonDrop();
                 break;
+            case Choices.CHOISE4:
+                this.#teachersValue = value;
         };
     };
 
@@ -67,7 +75,10 @@ export default class ChoicePresenter {
                 break;
             case Choices.CHOISE3:
                 replace(this.#choise2Component, this.#choise3Component);
-                break;   
+                break; 
+            case Choices.CHOISE4:
+                replace(this.#choise3Component, this.#choise4Component);
+                break;  
         };
     };
 }
