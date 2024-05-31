@@ -1,9 +1,22 @@
 import { professions } from "../mock/professions";
 
 export default class ProfessionsModel {
-  #professions = professions;
+    #professions = [];
+    #professionsApi = null;
 
-  get professions() {
-    return this.#professions;
-  }
+    constructor(professionsApi) {
+        this.#professionsApi = professionsApi;
+    }
+
+    get professions() {
+        return this.#professions;
+    }
+    
+    async init() {
+        try {
+        this.#professions = await this.#professionsApi.professions;
+        } catch(err) {
+        this.#professions = [];
+        }
+    }
 }
