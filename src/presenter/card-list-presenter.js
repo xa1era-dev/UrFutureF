@@ -23,8 +23,8 @@ export default class CardListPresenter {
     init() {
         this.#courses = [...this.#coursesModel.courses];
 
-        this.#cardSelectComponent = new CardsSelectView(this.#type, this.#handleSelectChange);
-        this.#cardListComponent = new CardsView(this.#courses);
+        this.#cardSelectComponent = new CardsSelectView(CardType.FINISH_COURSES, this.#handleSelectChange);
+        this.#cardListComponent = new CardsView(CardType.FINISH_COURSES, this.#courses);
 
         render(this.#cardSelectComponent, this.#container);
         render(this.#cardListComponent, this.#container);
@@ -32,9 +32,11 @@ export default class CardListPresenter {
 
     #handleSelectChange = (type, option) => {
         switch(type){
-            case CardType.COURSES:
+            case CardType.FINISH_COURSES:
                 const filtredCourses = filter[option](this.#courses);
-                replace(new CardsView(filtredCourses), this.#cardListComponent);
+                const newCardsComponent = new CardsView(CardType.FINISH_COURSES, filtredCourses);
+                replace(newCardsComponent, this.#cardListComponent);
+                this.#cardListComponent = newCardsComponent;
                 break;
         };
     };
