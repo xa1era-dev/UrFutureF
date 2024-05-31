@@ -1,3 +1,6 @@
+const AUTHORIZATION = 'accept: application/json';
+const END_POINT = 'window.location.origin';
+
 const CardType = {
     FINISH_COURSES: 'finish-courses',
     STUDY: 'study',
@@ -38,4 +41,4 @@ const TrajectoryComponents = {
     COURSES: 'courses',
 }
 
-export {CardType, Cards, Choices, TrajectoryComponents}
+export {CardType, Cards, Choices, TrajectoryComponents, AUTHORIZATION, END_POINT}

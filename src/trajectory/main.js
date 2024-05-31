@@ -9,8 +9,7 @@ import CoursesModel from "../model/courses-model";
 import CoursesApi from "../api/courses-api";
 import ProfessionsApi from "../api/professions-api";
 
-const AUTHORIZATION = 'accept: application/json';
-const END_POINT = 'http://urfuture.ru.website.yandexcloud.net';
+import { END_POINT, AUTHORIZATION } from "../const";
 
 const studyModel = new StudyModel();
 
