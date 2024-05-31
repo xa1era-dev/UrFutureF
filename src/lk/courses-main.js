@@ -5,8 +5,7 @@ import { CardType } from "../const";
 import { render } from "../utils/render";
 import CoursesApi from "../api/courses-api";
 
-const AUTHORIZATION = 'accept: application/json';
-const END_POINT = 'http://urfuture.ru.website.yandexcloud.net';
+import { END_POINT, AUTHORIZATION } from "../const";
 
 const coursesModel = new CoursesModel(
     new CoursesApi(END_POINT, AUTHORIZATION)
