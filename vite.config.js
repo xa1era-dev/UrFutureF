@@ -12,6 +12,7 @@ export default {
         personal: resolve(__dirname, 'public/personal.html'),
         coursesFinish: resolve(__dirname, 'public/finish-courses.html'),
         trajectory: resolve(__dirname, 'public/trajectory.html'),
+        choice: resolve(__dirname, 'public/choice.html'),
       }
     }
   },

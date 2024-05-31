@@ -13,7 +13,7 @@ function createNavTemplate() {
                             </svg>
                         </div>
                         <div class="content-nav__dropdown">
-                            <a class="content-nav__link" href="#">
+                            <a class="content-nav__link" href="index.html">
                                 Главная страница
                             </a>
                         </div>
