@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+    <div class="content-area">
+        <div class="content-nav">
+            <div class="content-nav__inner">
+                <div class="content-nav__top">
+                    <div class="content-nav__box">
+                        <div class="content-nav__item">
+                            <div class="content-nav__toggle">
+                                <svg class="content-nav__icon">
+                                    <use href="images/sprite.svg#nav-main"></use>
+                                </svg>
+                            </div>
+                            <div class="content-nav__dropdown">
+                                <a class="content-nav__link" href="#">
+                                    Главная страница
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-nav__item">
+                        <div class="content-nav__toggle">
+                            <svg class="content-nav__icon">
+                                <use href="images/sprite.svg#nav-calendar"></use>
+                            </svg>
+                        </div>
+                        <div class="content-nav__dropdown">
+                            <a class="content-nav__link" href="#">
+                                Расписание
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content-nav__item">
+                        <div class="content-nav__toggle">
+                            <svg class="content-nav__icon">
+                                <use href="images/sprite.svg#nav-studies"></use>
+                            </svg>
+                        </div>
+                        <div class="content-nav__dropdown">
+                            <a class="content-nav__link" href="#">
+                                Личный кабинет
+                            </a>
+                            <ul class="content-nav__list">
+                                <li class="content-nav__item">
+                                    <a class="content-nav__item-link" href="#">
+                                        Мое направление
+                                    </a>
+                                </li>
+                                <li class="content-nav__item">
+                                    <a class="content-nav__item-link" href="#">
+                                        Пройденные курсы
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content-nav__item">
+                        <div class="content-nav__toggle">
+                            <svg class="content-nav__icon">
+                                <use href="images/sprite.svg#nav-list"></use>
+                            </svg>
+                        </div>
+                        <div class="content-nav__dropdown">
+                            <a class="content-nav__link" href="#">
+                                ИОТ
+                            </a>
+                            <ul class="content-nav__list">
+                                <li class="content-nav__item">
+                                    <a class="content-nav__item-link" href="#">
+                                        Все курсы ИОТ
+                                    </a>
+                                </li>
+                                <li class="content-nav__item">
+                                    <a class="content-nav__item-link" href="#">
+                                        Рекомендованные
+                                        траектории
+                                    </a>
+                                </li>
+                                <li class="content-nav__item">
+                                    <a class="content-nav__item-link" href="#">
+                                        Курсы в рамках
+                                        направления
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content-nav__item">
+                        <div class="content-nav__toggle">
+                            <svg class="content-nav__icon">
+                                <use href="images/sprite.svg#nav-statistics"></use>
+                            </svg>
+                        </div>
+                        <div class="content-nav__dropdown">
+                            <a class="content-nav__link" href="#">
+                                Построение траектории
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content-nav__item">
+                        <div class="content-nav__toggle">
+                            <svg class="content-nav__icon">
+                                <use href="images/sprite.svg#nav-hat"></use>
+                            </svg>
+                        </div>
+                        <div class="content-nav__dropdown">
+                            <a class="content-nav__link" href="#">
+                                Профессии
+                            </a>
+                            <ul class="content-nav__list">
+                                <li class="content-nav__item">
+                                    <a class="content-nav__item-link" href="#">
+                                        Библиотека профессий
+                                    </a>
+                                </li>
+                                <li class="content-nav__item">
+                                    <a class="content-nav__item-link" href="#">
+                                        Рекомендуемые профессии
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content-nav__item">
+                        <div class="content-nav__toggle">
+                            <svg class="content-nav__icon">
+                                <use href="images/sprite.svg#nav-archive"></use>
+                            </svg>
+                        </div>
+                        <div class="content-nav__dropdown">
+                            <a class="content-nav__link" href="#">
+                                Тест на профориентацию
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content-nav__item">
+                        <div class="content-nav__toggle">
+                            <img class="content-nav__icon" src="images/nav-panel.png" alt="">
+                        </div>
+                        <div class="content-nav__dropdown">
+                            <a class="content-nav__link" href="#">
+                                Админ-панель
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-nav__bottom">
+                    <div class="content-nav__item">
+                        <div class="content-nav__toggle">
+                            <svg class="content-nav__icon">
+                                <use href="images/sprite.svg#nav-account"></use>
+                            </svg>
+                        </div>
+                        <div class="content-nav__dropdown">
+                            <a class="content-nav__link" href="#">
+                                Аккаунт
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-main">
+            <div class="title">
+                Выбор направления
+            </div>
+            <div class="study">
+                <div class="courses__select">
+                    <div class="itc-select js-select">
+                        <button class="itc-select__toggle" type="button" data-select="toggle" data-index="0">
+                            Больше направлений
+                        </button>
+                        <div class="itc-select__dropdown">
+                            <ul class="itc-select__options">
+                                <li class="itc-select__option itc-select__option_selected" data-select="option"
+                                    data-value="Все семестры" data-index="0">Больше направлений</li>
+                                <li class="itc-select__option" data-select="option"
+                                    data-value="Безопасность компьютерных систем" data-index="1">Безопасность
+                                    компьютерных систем</li>
+                                <li class="itc-select__option" data-select="option"
+                                    data-value="Инфокоммуникационные технологии и системы" data-index="2">
+                                    Инфокоммуникационные технологии и системы</li>
+                                <li class="itc-select__option" data-select="option"
+                                    data-value="Информатика и вычислительная техника" data-index="3">Информатика и
+                                    вычислительная техника</li>
+                                <li class="itc-select__option" data-select="option"
+                                    data-value="Конструирование и технология электронных" data-index="4">Конструирование
+                                    и технология электронных</li>
+                                <li class="itc-select__option" data-select="option" data-value="Прикладная информатика"
+                                    data-index="5">Прикладная информатика</li>
+                                <li class="itc-select__option" data-select="option" data-value="Программная инженерия"
+                                    data-index="6">Программная инженерия</li>
+                                <li class="itc-select__option" data-select="option" data-value="Радиотехника"
+                                    data-index="7">Радиотехника</li>
+                                <li class="itc-select__option" data-select="option"
+                                    data-value="Управление в технических системах" data-index="8">Управление в
+                                    технических системах</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="courses__items">
+                    <a class="courses__item" href="#"
+                        style="background-image: url('/public/images/content/study/cover-1.jpg');">
+                        <p>
+                            Программная инженерия
+                        </p>
+                    </a>
+                    <a class="courses__item" href="#"
+                        style="background-image: url('/public/images/content/study/cover-2.jpg');">
+                        <p>
+                            Прикладная информатика
+                        </p>
+                    </a>
+                    <a class="courses__item" href="#"
+                        style="background-image: url('/public/images/content/study/cover-3.jpg');">
+                        <p>
+                            Информатика и вычислительная техника
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="study-footer">
+                <a class="study-footer__link" href="#">Назад</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>
