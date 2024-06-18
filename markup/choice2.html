@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="../public/css/style.min.css">
 </head>
 
 <body>
@@ -21,20 +21,47 @@
                 <div class="tests-content">
                     <div class="tests-title">Укажите в какие дни недели вам бы хотелось посещать пары</div>
                     <form>
-                        <label>Понедельник<input type="checkbox" name="day" value="Понедельник"></label>
-                        <label>Вторник<input type="checkbox" name="day" value="Вторник"></label>
-                        <label>Среда<input type="checkbox" name="day" value="Среда"></label>
-                        <label>Четверг<input type="checkbox" name="day" value="Четверг"></label>
-                        <label>Пятница<input type="checkbox" name="day" value="Пятница"></label>
-                        <label>Суббота<input type="checkbox" name="day" value="Суббота"></label>
+                        <label class="tests-label">
+                            Понедельник
+                            <input type="checkbox" name="day" value="Понедельник">
+                            <div class="tests-checkbox"></div>
+                        </label>
+                        <label class="tests-label">
+                            Вторник
+                            <input type="checkbox" name="day" value="Вторник">
+                            <div class="tests-checkbox"></div>
+                        </label>
+                        <label class="tests-label">
+                            Среда
+                            <input type="checkbox" name="day" value="Среда">
+                            <div class="tests-checkbox"></div>
+                        </label>
+                        <label class="tests-label">
+                            Четверг
+                            <input type="checkbox" name="day" value="Четверг">
+                            <div class="tests-checkbox"></div>
+                        </label>
+                        <label class="tests-label">
+                            Пятница
+                            <input type="checkbox" name="day" value="Пятница">
+                            <div class="tests-checkbox"></div>
+                        </label>
+                        <label class="tests-label">
+                            Суббота
+                            <input type="checkbox" name="day" value="Суббота">
+                            <div class="tests-checkbox"></div>
+                        </label>
                     </form>
                 </div>
-                <button class="previous-choice">Назад</button>
-                <button class="next-choice">Далее</button>
+                <div class="bottom-choise">
+                    <button class="previous-choise">Назад</button>
+                    <button class="next-choise">Далее</button>
+                </div>
             </div>
         </div>
     </div>
 
+    <script src="/src/lk/choice-main.js" type="module"></script>
     <script src="js/main.min.js"></script>
 </body>
 

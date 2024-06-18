@@ -1,32 +1,107 @@
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
-<link rel="stylesheet" href="../public/css/style.min.css">
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/css/style.min.css">
 </head>
 
 <body>
+
     <div class="content-area">
         <!-- Навигация -->
         <div class="content-main">
             <div class="title">
-                Расставьте приоритет выбора преподавателей
+                Построение расписания
             </div>
-                    <details>
-                        <summary>
-                            Компьютерные сети
-                            <label class="checkbox-label">
-                                <input class="checkbox-input" type="checkbox" name="lesson">
-                                <div class="checkbox-border"></div>
+            <!-- Контент -->
+            <div class="tests">
+                <div class="tests-content tests-content--two">
+                    <div class="tests-title">Расставьте приоритет выбора преподавателей</div>
+                    <form>
+                        <details>
+                            <summary>
+                                Алгоритмы и анализ сложности
+                                <label class="checkbox-label">
+                                    <input class="checkbox-input" type="checkbox" name="lesson">
+                                    <div class="checkbox-border"></div>
                                     <p class="checkbox-title">Важен приоритет преподавателей</p>
-                            </label>
-                        </summary>
-                        
-                    </details>
+                                </label>
+                            </summary>
+                            <ol class="lesson-list">
+                                <li class="lesson-item" draggable="true">
+                                    <div class="lesson-item__drag"></div>
+                                    <div class="lesson-item__content">
+                                        <p class="lesson-item__num">1</p>
+                                        <p class="lesson-item__text">
+                                            Компьютерные сети (Традиционный курс)
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="lesson-item" draggable="true">
+                                    <div class="lesson-item__drag"></div>
+                                    <div class="lesson-item__content">
+                                        <p class="lesson-item__num">2</p>
+                                        <p class="lesson-item__text">
+                                            Компьютерные сети К Телеком (Традиционный курс)
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="lesson-item" draggable="true">
+                                    <div class="lesson-item__drag"></div>
+                                    <div class="lesson-item__content">
+                                        <p class="lesson-item__num">3</p>
+                                        <p class="lesson-item__text">
+                                            Компьютерные сети на базе Cisco (смешанный)
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="lesson-item" draggable="true">
+                                    <div class="lesson-item__drag"></div>
+                                    <div class="lesson-item__content">
+                                        <p class="lesson-item__num">4</p>
+                                        <p class="lesson-item__text">
+                                            Компьютерные сети на базе DLink (Традиционный курс)
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="lesson-item" draggable="true">
+                                    <div class="lesson-item__drag"></div>
+                                    <div class="lesson-item__content">
+                                        <p class="lesson-item__num">5</p>
+                                        <p class="lesson-item__text">
+                                            Компьютерные сети на базе Huawei (повышенный уровень)
+                                        </p>
+                                    </div>
+                                </li>
+                            </ol>
+                        </details>
+                    </form>
+                </div>
+                <button>Назад</button>
+                <button>Далее</button>
             </div>
         </div>
     </div>
 
     <script src="/src/lk/choice-main.js" type="module"></script>
+    <script src="/public/js/main.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.discipline-block').forEach(function (block) {
+                const label = block.querySelector('.disciplines-label');
+                const details = block.querySelector('details');
+
+                label.addEventListener('click', function (event) {
+                    if (event.target.tagName !== 'INPUT') {
+                        details.open = !details.open;
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
